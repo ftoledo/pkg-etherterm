@@ -1,0 +1,13 @@
+--- EtherTerm-master.orig/EtherTerm.linux.mk	2016-01-04 04:43:02.000000000 -0300
++++ EtherTerm-master.mod/EtherTerm.linux.mk	2016-02-25 23:26:43.570814923 -0300
+@@ -50,8 +50,8 @@ LibPath                := $(LibraryPathS
+ AR       ?= /usr/bin/ar rcu
+ CXX      ?= /usr/bin/g++
+ CC       ?= /usr/bin/gcc
+-CXXFLAGS +=  -Wfatal-errors -O2 -pedantic -W -std=c++11 -Wall  $(Preprocessors)
+-CFLAGS   +=  -Wfatal-errors -O2 -pedantic -W -std=c++11 -Wall  $(Preprocessors)
++CXXFLAGS +=  -g -Wfatal-errors -O2 -pedantic -W -std=c++11 -Wall  $(Preprocessors)
++CFLAGS   +=  -g -Wfatal-errors -O2 -pedantic -W -std=c++11 -Wall  $(Preprocessors)
+ 
+ ASFLAGS  :=
+ AS       ?= /usr/bin/as

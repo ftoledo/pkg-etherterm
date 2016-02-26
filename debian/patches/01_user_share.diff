@@ -1,0 +1,52 @@
+Subdirectorios comunes: EtherTerm-master.orig/assets y EtherTerm-master.mod/assets
+diff -up EtherTerm-master.orig/menuConfig.cpp EtherTerm-master.mod/menuConfig.cpp
+--- EtherTerm-master.orig/menuConfig.cpp	2016-01-04 04:43:02.000000000 -0300
++++ EtherTerm-master.mod/menuConfig.cpp	2016-02-25 22:58:10.908856971 -0300
+@@ -21,7 +21,7 @@
+  */
+ std::string MenuConfig::SetupThePath()
+ {
+-    std::string path = TheRenderer::Instance()->getProgramPath();
++    std::string path = "/usr/share/EtherTerm/";
+ #ifdef _WIN32
+     path.append("assets\\");
+ #else
+diff -up EtherTerm-master.orig/menuFunction.cpp EtherTerm-master.mod/menuFunction.cpp
+--- EtherTerm-master.orig/menuFunction.cpp	2016-01-04 04:43:02.000000000 -0300
++++ EtherTerm-master.mod/menuFunction.cpp	2016-02-25 22:58:15.304896900 -0300
+@@ -57,7 +57,7 @@ MenuFunction::~MenuFunction()
+  */
+ std::string MenuFunction::setupMenuPath()
+ {
+-    std::string path = TheRenderer::Instance()->getProgramPath();
++    std::string path = "/usr/share/EtherTerm/";
+ #ifdef _WIN32
+     path += "assets\\";
+ #else
+diff -up EtherTerm-master.orig/menuIO.cpp EtherTerm-master.mod/menuIO.cpp
+--- EtherTerm-master.orig/menuIO.cpp	2016-01-04 04:43:02.000000000 -0300
++++ EtherTerm-master.mod/menuIO.cpp	2016-02-25 22:58:16.148904247 -0300
+@@ -740,7 +740,7 @@ void MenuIO::sequenceToAnsi(const std::s
+ void MenuIO::displayAnsiFile(const std::string &fileName)
+ {
+     //std::cout << "ansiPrintf" << std::endl;
+-    std::string path = TheRenderer::Instance()->getProgramPath();
++    std::string path = "/usr/share/EtherTerm/";
+ #ifdef _WIN32
+     path += "assets\\";
+ #else
+Sólo en EtherTerm-master.mod/: Release
+diff -up EtherTerm-master.orig/renderer.cpp EtherTerm-master.mod/renderer.cpp
+--- EtherTerm-master.orig/renderer.cpp	2016-01-04 04:43:02.000000000 -0300
++++ EtherTerm-master.mod/renderer.cpp	2016-02-25 22:58:16.728909299 -0300
+@@ -587,7 +587,7 @@ bool Renderer::loadBitmapImage(std::stri
+ {
+     //std::cout << "LoadBitmap: " << path << std::endl;
+     //Load image at specified path
+-    std::string path = TheRenderer::Instance()->getProgramPath();
++    std::string path = "/usr/share/EtherTerm/";
+ 
+     std::cout << "loading Fontname -> : " << fontName << std::endl;
+ 
+Subdirectorios comunes: EtherTerm-master.orig/tools y EtherTerm-master.mod/tools
+Subdirectorios comunes: EtherTerm-master.orig/UnitTests y EtherTerm-master.mod/UnitTests

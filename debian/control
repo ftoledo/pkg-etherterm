@@ -1,0 +1,26 @@
+Source: etherterm
+Section: comm
+Priority: optional
+Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
+Build-Depends: debhelper (>= 9), build-essential, libsdl2-dev, libsdl2-net-dev,
+ libssh-dev
+Standards-Version: 3.9.6
+Homepage: https://github.com/M-griffin/EtherTerm
+Vcs-Git: https://github.com/ftoledo/pkg-etherterm.git
+Vcs-Browser: https://github.com/ftoledo/pkg-etherterm
+
+Package: etherterm
+Architecture: i386 amd64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+Description: EtherTerm (SDL2) Telnet/SSH Terminal
+ EtherTerm is a portable terminal emulator and telnet/ssh client for
+ Windows and Unix.
+ .  
+ It differs from standard terminal emulators such as xterm and PuTTY 
+ by providing a common telnet and ssh protocol across platforms, with 
+ particular focus on font sets appropriate for connecting to BBS servers
+ using cp437, and amiga art.
+ .
+ EtherTerm is comparable to programs such as syncterm and netrunner. 
+ Notably: It is an SDL graphics program and makes use of full 
+ OpenGL/DirectX graphics acceleration.
